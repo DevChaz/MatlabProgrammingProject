@@ -1,0 +1,4 @@
+Average Score: 82.4
+Highest Score: 92
+ID: 2
+Name: Anne

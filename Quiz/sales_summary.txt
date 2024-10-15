@@ -1,0 +1,18 @@
+Sales Summary:
+
+Total Sales for Each Product:
+ID: 1, Crop: Rice, Total Sales: PHP 60000.00
+ID: 2, Crop: Corn, Total Sales: PHP 69000.00
+ID: 3, Crop: Wheat, Total Sales: PHP 90000.00
+ID: 4, Crop: Soybean, Total Sales: PHP 54000.00
+ID: 5, Crop: Barley, Total Sales: PHP 70000.00
+
+Total Quantity Sold for Each Product:
+ID: 1, Crop: Rice, Quantity Sold: 1500 kg
+ID: 2, Crop: Corn, Quantity Sold: 2300 kg
+ID: 3, Crop: Wheat, Quantity Sold: 1800 kg
+ID: 4, Crop: Soybean, Quantity Sold: 1200 kg
+ID: 5, Crop: Barley, Quantity Sold: 2000 kg
+
+Product with the Highest Total Sales:
+ID: 3, Crop: Wheat, Sales: PHP 90000.00

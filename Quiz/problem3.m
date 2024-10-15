@@ -1,5 +1,5 @@
 %Problem 3
-%......
+%............
 data = readtable('CST2_4-Data.xlsx');
 
 disp('Imported Data:');

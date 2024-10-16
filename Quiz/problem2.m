@@ -1,35 +1,23 @@
-%Problem 2
-data = readtable('crop_data.xlsx');
-disp(data.Properties.VariableNames);  
+% Problem 2
+% Read data from the Excel file
+data = readtable('sales_data.xlsx');
+%disp(data.Properties.VariableNames); % Option to check for column names 
 
-data.TotalSales = data.("Quantity_kg_") .* data.("PricePerclc" + ...
-    "kg_PHP_");
+data.QuantitySold_in_KG_ = data.QuantitySold_in_MT_ * 1000; 
 
-[max_sales, max_index] = max(data.TotalSales);
-max_sales_id = data.ID(max_index);
-max_sales_crop = data.Crop{max_index};
+data.TotalSales = data.QuantitySold_in_MT_ .* data.UnitPrice_PHP_; 
 
 fileID = fopen('sales_summary.txt', 'w');
 
-fprintf(fileID, 'Sales Summary:\n\n');
-fprintf(fileID, 'Total Sales for Each Product:\n');
 for i = 1:height(data)
-    fprintf(fileID, 'ID: %d, Crop: %s, Total Sales: PHP %.2f\n', ...
-        data.ID(i), data.Crop{i}, data.TotalSales(i));
+    fprintf(fileID, 'ProductID: %s, Total Sales: %.2f, Quantity Sold: %.2f MT\n', data.ProductID{i}, data.TotalSales(i), data.QuantitySold_in_MT_(i));
 end
 
-fprintf(fileID, '\nTotal Quantity Sold for Each Product:\n');
-for i = 1:height(data)
-    fprintf(fileID, 'ID: %d, Crop: %s, Quantity Sold: %d kg\n', ...
-        data.ID(i), data.Crop{i}, data.("Quantity_kg_")(i));
-end
+[max_sales, max_index] = max(data.TotalSales);
+max_sales_id = data.ProductID{max_index};  
 
-fprintf(fileID, '\nProduct with the Highest Total Sales:\n');
-fprintf(fileID, 'ID: %d, Crop: %s, Sales: PHP %.2f\n', ...
-    max_sales_id, max_sales_crop, max_sales);
+fprintf(fileID, 'Product with Highest Sales: %s, Sales Amount: %.2f\n', max_sales_id, max_sales);
 
 fclose(fileID);
 
 disp('Sales summary has been written to sales_summary.txt.');
-
-

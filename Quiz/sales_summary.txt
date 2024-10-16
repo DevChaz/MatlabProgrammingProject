@@ -1,18 +1,11 @@
-Sales Summary:
-
-Total Sales for Each Product:
-ID: 1, Crop: Rice, Total Sales: PHP 60000.00
-ID: 2, Crop: Corn, Total Sales: PHP 69000.00
-ID: 3, Crop: Wheat, Total Sales: PHP 90000.00
-ID: 4, Crop: Soybean, Total Sales: PHP 54000.00
-ID: 5, Crop: Barley, Total Sales: PHP 70000.00
-
-Total Quantity Sold for Each Product:
-ID: 1, Crop: Rice, Quantity Sold: 1500 kg
-ID: 2, Crop: Corn, Quantity Sold: 2300 kg
-ID: 3, Crop: Wheat, Quantity Sold: 1800 kg
-ID: 4, Crop: Soybean, Quantity Sold: 1200 kg
-ID: 5, Crop: Barley, Quantity Sold: 2000 kg
-
-Product with the Highest Total Sales:
-ID: 3, Crop: Wheat, Sales: PHP 90000.00
+ProductID: CH001, Total Sales: 356.10, Quantity Sold: 6.00 MT
+ProductID: PN002, Total Sales: 372.68, Quantity Sold: 4.00 MT
+ProductID: CB003, Total Sales: 1248.45, Quantity Sold: 15.00 MT
+ProductID: TM004, Total Sales: 1599.10, Quantity Sold: 10.00 MT
+ProductID: OR005, Total Sales: 1410.72, Quantity Sold: 12.00 MT
+ProductID: WP006, Total Sales: 1469.88, Quantity Sold: 12.00 MT
+ProductID: EG007, Total Sales: 704.48, Quantity Sold: 8.00 MT
+ProductID: AB008, Total Sales: 580.00, Quantity Sold: 5.00 MT
+ProductID: CR009, Total Sales: 1286.60, Quantity Sold: 10.00 MT
+ProductID: SQ010, Total Sales: 522.16, Quantity Sold: 8.00 MT
+Product with Highest Sales: TM004, Sales Amount: 1599.10

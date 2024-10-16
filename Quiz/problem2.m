@@ -15,15 +15,13 @@ function formatted_amount = format_to_peso(amount)
 end
 
 for i = 1:height(data)
-    fprintf(fileID, 'ProductID: %s, Total Sales: %s, Quantity Sold: %.2f MT\n', ...
-        data.ProductID{i}, format_to_peso(data.TotalSales(i)), data.QuantitySold_in_MT_(i));
+    fprintf(fileID, 'ProductID: %s, Total Sales: %s, Quantity Sold: %.2f MT\n', data.ProductID{i}, format_to_peso(data.TotalSales(i)), data.QuantitySold_in_MT_(i));
 end
 
 [max_sales, max_index] = max(data.TotalSales);
 max_sales_id = data.ProductID{max_index};  
 
-fprintf(fileID, 'Product with Highest Sales: %s, Sales Amount: %s\n', ...
-    max_sales_id, format_to_peso(max_sales));
+fprintf(fileID, 'Product with Highest Sales: %s, Sales Amount: %s\n', max_sales_id, format_to_peso(max_sales));
 
 fclose(fileID);
 
